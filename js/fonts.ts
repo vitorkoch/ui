@@ -5,13 +5,11 @@ enum FontType {
 }
 
 type Fonts = {
-  readonly [K in FontType]: readonly string[];
+  readonly [K in FontType]:  string[];
 };
 
-export const fonts = {
+export const fonts: Fonts = {
   [FontType.sans]: ["Host Grotesk", "sans-serif"],
   [FontType.mono]: ["Jetbrains Mono", "monospace"],
   [FontType.display]: ["Space Mono", "sans-serif"],
-} satisfies Fonts;
-
-fonts.display.at(0);
+};
